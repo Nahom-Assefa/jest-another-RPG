@@ -16,10 +16,3 @@ test("creates a random potion object", () => {
   expect(potion.types.length).toBeGreaterThan(0);
   expect(potion.value).toEqual(expect.any(Number));
 });
-
-
-
-
-
-
-
