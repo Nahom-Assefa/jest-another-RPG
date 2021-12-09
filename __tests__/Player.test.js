@@ -22,6 +22,7 @@ test('creates a player object', () => {
 
 test('get player stats as an object', () => {
     const player = new Player('Dave');
+    console.log(player);
 
     expect(player.getStats()).toHaveProperty('potions');
     expect(player.getStats()).toHaveProperty('health');
@@ -88,6 +89,7 @@ test(`uses a potion from inventory`, () => {
     const player = new Player('Dave');
     player.inventory = [new Potion(), new Potion(), new Potion()];
     const oldCount = player.inventory.length;
+    console.log('line 92', oldCount);
 
     player.usePotion(1);
     expect(player.inventory.length).toBeLessThan(oldCount);
